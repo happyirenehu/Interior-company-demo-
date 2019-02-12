@@ -1,0 +1,128 @@
+/* http://www.menucool.com/jquery-slider */
+
+
+        ul#myGallery {
+            margin:0 auto;
+            padding:0;
+            list-style:none;
+            width:100%;
+            max-width:80%;
+            font-size:0;
+            cursor:pointer;
+        }
+        ul#myGallery li {
+            margin:0;
+            padding:4px;
+            float:left;
+            width:33%;
+            box-sizing:border-box;
+        }
+        ul#myGallery img {
+            width:100%;
+        }
+
+        #closeBtn {
+            display:block;
+            position:fixed;
+            top:12px;
+            right:6px;
+            font:bold 18px/26px Arial;
+            color:white;
+            width:80px;
+            height:26px;
+            border:1px solid rgba(255,255,255,0.4);
+            cursor:pointer;
+            text-align:center;
+            z-index:2;
+        }
+
+#thumbnail-sliderr {
+    margin:0 auto; /*center-aligned*/
+    height:100%;
+    display:block;
+    padding:0px;
+    position:fixed;
+    left:0;right:0;top:0;bottom:0;
+    z-index: 9999;
+    -webkit-user-select: none;
+    user-select:none;
+}
+
+#thumbnail-sliderr div.inner {
+    padding:0 20px;
+
+    /*the followings should not be changed */
+    height:100%;
+    box-sizing:content-box;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+ 
+#thumbnail-sliderr div.inner ul {
+    
+    /*the followings should not be changed */
+    position:relative;
+    left:0; top:0;
+    list-style:none;
+    font-size:0;
+    padding:0;
+    margin:0;
+    float:left!important;
+    width:auto!important;
+    height:auto!important;
+}
+
+#thumbnail-sliderr ul li {
+    display:block;
+    margin:8px 0; /* Spacing between thumbs*/
+    transition:all 0.5s;
+    box-sizing:content-box;
+    
+    text-align:center;
+    padding:0;
+    position:relative;
+    list-style:none;
+    backface-visibility:hidden;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#thumbnail-sliderr ul li.active {
+    opacity:1;
+	-webkit-filter: initial;
+	filter: initial;
+}
+
+#thumbnail-sliderr li:hover {
+	-webkit-filter: grayscale(50%);
+	filter: grayscale(50%);
+}
+
+
+#thumbnail-sliderr .thumb {
+    opacity:0.5;
+    
+    width:100%;
+    height: 100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:block;
+    position:absolute;
+}
+
+#thumbnail-sliderr ul li.active .thumb {
+    opacity:1;
+}
+/* --------- navigation controls ------- */
+/* The nav id should be: slider id + ("-prev", "-next", and "-pause-play") */
+
+#thumbnail-sliderr-pause-play {display:none;} /*.pause*/
+
+#thumbnail-sliderr-prev, #thumbnail-sliderr-next
+{
+    display:none;
+}
